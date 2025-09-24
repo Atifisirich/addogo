@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Addogo — Telangana SMB Growth Agency</title>
+  <meta name="description" content="Addogo builds websites, designs graphics, improves SEO, and manages social media for Telangana SMBs." />
+  <link rel="icon" href="assets/addogo-favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/addogo-logo.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{primary:{DEFAULT:'#2563eb',700:'#1d4ed8'}},boxShadow:{card:'0 8px 24px rgba(2,6,23,.08)'}}}};</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    .hover-zoom{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}.hover-zoom:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 40px rgba(2,6,23,.12)}
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body class="text-slate-800 antialiased bg-slate-50">
+  <header class="sticky top-0 z-50 border-b bg-white/90 backdrop-blur border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/addogo-logo.svg" alt="Addogo" class="h-8 w-auto" onerror="this.onerror=null;this.src='assets/addogo-logo.png';" />
+        </a>
+        <nav class="hidden md:flex items-center gap-1">
+          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-primary">Home</a>
+          <a href="solutions.html" class="px-3 py-2 rounded-md text-sm font-medium">Our Solutions</a>
+          <a href="industries.html" class="px-3 py-2 rounded-md text-sm font-medium">Who We Help</a>
+          <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium">About</a>
+          <a href="contact.html" class="ml-1 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary-700">Contact</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-slate-300">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden pb-4">
+        <div class="grid gap-1">
+          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium">Home</a>
+          <a href="solutions.html" class="px-3 py-2 rounded-md text-sm font-medium">Our Solutions</a>
+          <a href="industries.html" class="px-3 py-2 rounded-md text-sm font-medium">Who We Help</a>
+          <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium">About</a>
+          <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-semibold bg-primary text-white">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="bg-gradient-to-b from-slate-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">Simple Digital Solutions That Bring You More Customers</h1>
+            <p class="mt-4 text-lg text-slate-600">We build websites, design graphics, improve SEO, and manage social media for local businesses in Telangana.</p>
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary-700 transition">Get a Free Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+            <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-slate-600">
+              <div class="p-4 rounded-lg bg-white shadow-card hover-zoom"><div class="font-bold text-slate-900">+40%</div><div>More Reservations</div></div>
+              <div class="p-4 rounded-lg bg-white shadow-card hover-zoom"><div class="font-bold text-slate-900">2x</div><div>Call Inquiries</div></div>
+              <div class="p-4 rounded-lg bg-white shadow-card hover-zoom"><div class="font-bold text-slate-900">+120</div><div>5-Star Reviews</div></div>
+              <div class="p-4 rounded-lg bg-white shadow-card hover-zoom"><div class="font-bold text-slate-900">3 Weeks</div><div>Avg. Go-Live</div></div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-xl overflow-hidden shadow-card hover-zoom bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Summary -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-bold mb-6 text-center">Our Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <a href="solutions.html#websites" class="p-6 rounded-xl border border-slate-200 bg-white shadow-card hover-zoom text-center">
+            <i data-lucide="globe" class="w-6 h-6 mx-auto mb-2 text-primary"></i>
+            <div class="font-semibold">Websites</div>
+            <p class="text-sm text-slate-600 mt-1">Clean, fast, mobile-first sites that convert.</p>
+          </a>
+          <a href="solutions.html#design" class="p-6 rounded-xl border border-slate-200 bg-white shadow-card hover-zoom text-center">
+            <i data-lucide="brush" class="w-6 h-6 mx-auto mb-2 text-primary"></i>
+            <div class="font-semibold">Graphic Design</div>
+            <p class="text-sm text-slate-600 mt-1">Logos, menus, brochures, social creatives.</p>
+          </a>
+          <a href="solutions.html#seo" class="p-6 rounded-xl border border-slate-200 bg-white shadow-card hover-zoom text-center">
+            <i data-lucide="search" class="w-6 h-6 mx-auto mb-2 text-primary"></i>
+            <div class="font-semibold">SEO</div>
+            <p class="text-sm text-slate-600 mt-1">Technical fixes, local listings, ranking content.</p>
+          </a>
+          <a href="solutions.html#social" class="p-6 rounded-xl border border-slate-200 bg-white shadow-card hover-zoom text-center">
+            <i data-lucide="share-2" class="w-6 h-6 mx-auto mb-2 text-primary"></i>
+            <div class="font-semibold">Social Media</div>
+            <p class="text-sm text-slate-600 mt-1">Posting, replies, campaigns that grow presence.</p>
+          </a>
+        </div>
+        <div class="text-center mt-8">
+          <a href="solutions.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-slate-300 font-semibold hover:border-primary hover:text-primary">View All Details</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 py-10 bg-white/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <div class="font-semibold">Addogo</div>
+        </div>
+        <div class="text-sm text-slate-600">© 2025 Addogo. Built for Telangana SMBs.</div>
+        <div class="flex items-center gap-4 text-sm">
+          <a href="contact.html" class="hover:text-primary">Contact</a>
+          <a href="about.html" class="hover:text-primary">About</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/916305655342?text=Hi%20Addogo%2C%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener" title="Chat on WhatsApp"
+     class="fixed bottom-5 right-5 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white grid place-items-center shadow-xl">
+    <i data-lucide="message-circle"></i>
+  </a>
+
+  <script>lucide.createIcons();document.getElementById('menuBtn')?.addEventListener('click',()=>document.getElementById('mobileMenu')?.classList.toggle('hidden'));</script>
+</body>
+</html>

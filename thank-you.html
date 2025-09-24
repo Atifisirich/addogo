@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You — Addogo</title>
+  <meta name="description" content="Thanks for contacting Addogo. We'll be in touch shortly." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/addogo-logo.png" type="image/png" />
+  <script>tailwind.config={theme:{extend:{colors:{primary:{DEFAULT:'#2563eb',700:'#1d4ed8'}}}}};</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <main class="min-h-screen grid place-items-center px-4">
+    <div class="max-w-md text-center">
+      <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-green-100 text-green-600 grid place-items-center">
+        <i data-lucide="check" class="w-7 h-7"></i>
+      </div>
+      <h1 class="text-2xl font-extrabold">Thank You!</h1>
+      <p class="mt-2 text-slate-600">We received your message. Our team will contact you at <span class="font-medium">+91 6305655342</span> or <span class="font-medium">info@addogo.com</span> soon.</p>
+      <div class="mt-6 flex items-center justify-center gap-3">
+        <a href="index.html" class="px-5 py-2.5 rounded-md bg-primary text-white font-semibold hover:bg-primary-700">Back to Home</a>
+        <a href="https://wa.me/916305655342?text=Hi%20Addogo%2C%20thanks%20for%20confirming!" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-md border border-slate-300 font-semibold hover:border-primary hover:text-primary">WhatsApp Us</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/916305655342?text=Hi%20Addogo%2C%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener" title="Chat on WhatsApp"
+     class="fixed bottom-5 right-5 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white grid place-items-center shadow-xl">
+    <i data-lucide="message-circle"></i>
+  </a>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
