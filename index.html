@@ -1,58 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Primary Meta Tags -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Addogo — Telangana SMB Growth Agency</title>
-  <meta name="description" content="Addogo builds websites, designs graphics, improves SEO, and manages social media for Telangana SMBs." />
-  <link rel="icon" href="assets/addogo-favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="assets/addogo-logo.png" type="image/png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{colors:{primary:{DEFAULT:'#2563eb',700:'#1d4ed8'}},boxShadow:{card:'0 8px 24px rgba(2,6,23,.08)'}}}};</script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Best Digital Marketing Agency | Top-Rated Online Marketing Services | Addogo</title>
+  <meta name="description" content="Addogo is the best digital marketing agency helping businesses grow online. Expert SEO, PPC, social media, and web design services. Get a free consultation today!" />
+  <meta name="keywords" content="best digital marketing agency, top digital marketing company, online marketing services, SEO agency, PPC management, social media marketing, web design services, internet marketing agency" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="author" content="Addogo" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.addogo.com/" />
+  <meta property="og:title" content="Best Digital Marketing Agency | Top-Rated Online Marketing Services | Addogo" />
+  <meta property="og:description" content="Addogo is the best digital marketing agency helping businesses grow online with expert digital marketing services. Get a free consultation today!" />
+  <meta property="og:image" content="https://www.addogo.com/assets/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.addogo.com/" />
+  <meta property="twitter:title" content="Best Digital Marketing Agency | Top-Rated Services | Addogo" />
+  <meta property="twitter:description" content="Addogo is the best digital marketing agency helping businesses grow online with expert digital marketing services. Get a free consultation today!" />
+  <meta property="twitter:image" content="https://www.addogo.com/assets/og-image.jpg" />
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="assets/addogo-logo.svg" as="image" type="image/svg+xml" />
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script" />
+  <link rel="preload" href="https://unpkg.com/lucide@latest" as="script" />
+  
+  <!-- Favicons -->
+  <link rel="icon" href="assets/images/logo icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/logo icon.png" />
+  
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Addogo" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.addogo.com/" />
+  
+  <!-- Critical CSS -->
   <style>
-    .hover-zoom{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}.hover-zoom:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 40px rgba(2,6,23,.12)}
-    html{scroll-behavior:smooth}
+    /* Critical CSS */
+    :root {
+      --primary: #1e40af;
+      --primary-dark: #1e3a8a;
+      --primary-light: #3b82f6;
+      --secondary: #f3f4f6;
+      --secondary-dark: #e5e7eb;
+      --accent: #0d9488;
+      --accent-dark: #0f766e;
+      --accent-light: #14b8a6;
+    }
+    
+    /* Base styles */
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    /* Hover effects */
+    .hover-zoom {
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), 
+                  box-shadow 0.35s ease,
+                  background-color 0.2s ease;
+    }
+    .hover-zoom:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+    }
+    
+    /* Smooth scrolling */
+    @media (prefers-reduced-motion: no-preference) {
+      html {
+        scroll-behavior: smooth;
+      }
+    }
+    
+    /* Layout shifts prevention */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    /* Button styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.625rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+    }
+    
+    /* Navigation */
+    .nav-link {
+      position: relative;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      color: #1f2937;
+      transition: color 0.2s ease;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .nav-link.active {
+      color: var(--primary);
+    }
+    
+    .nav-link.active:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      background-color: var(--primary);
+      border-radius: 9999px;
+    }
   </style>
+  
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Configure Tailwind
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            // 60% Primary - Deep Blue
+            primary: {
+              DEFAULT: '#1e40af',
+              dark: '#1e3a8a',
+              light: '#3b82f6',
+            },
+            // 30% Secondary - Soft Gray
+            secondary: {
+              DEFAULT: '#f3f4f6',
+              dark: '#e5e7eb',
+            },
+            // 10% Accent - Vibrant Teal
+            accent: {
+              DEFAULT: '#0d9488',
+              dark: '#0f766e',
+              light: '#14b8a6',
+            },
+            blue: {
+              700: '#1d4ed8'
+            }
+          },
+          boxShadow: {
+            card: '0 8px 24px rgba(2,6,23,.08)'
+          },
+          fontFamily: {
+            sans: ['Inter var', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+          }
+        }
+      },
+      variants: {
+        extend: {
+          opacity: ['disabled'],
+          cursor: ['disabled'],
+        }
+      },
+      plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+      ]
+    };
+  </script>
+  
+  <!-- Load Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Load Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="text-slate-800 antialiased bg-slate-50">
-  <header class="sticky top-0 z-50 border-b bg-white/90 backdrop-blur border-slate-200">
+<body class="bg-white text-gray-900 antialiased">
+  <!-- Header -->
+  <header class="fixed w-full bg-white shadow-sm z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="h-16 flex items-center justify-between">
-        <a href="index.html" class="flex items-center gap-3">
-          <img src="assets/addogo-logo.svg" alt="Addogo" class="h-8 w-auto" onerror="this.onerror=null;this.src='assets/addogo-logo.png';" />
-        </a>
-        <nav class="hidden md:flex items-center gap-1">
-          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-primary">Home</a>
-          <a href="solutions.html" class="px-3 py-2 rounded-md text-sm font-medium">Our Solutions</a>
-          <a href="industries.html" class="px-3 py-2 rounded-md text-sm font-medium">Who We Help</a>
-          <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium">About</a>
-          <a href="contact.html" class="ml-1 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary-700">Contact</a>
-        </nav>
-        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-slate-300">
-          <i data-lucide="menu"></i>
-        </button>
-      </div>
-      <div id="mobileMenu" class="hidden md:hidden pb-4">
-        <div class="grid gap-1">
-          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium">Home</a>
-          <a href="solutions.html" class="px-3 py-2 rounded-md text-sm font-medium">Our Solutions</a>
-          <a href="industries.html" class="px-3 py-2 rounded-md text-sm font-medium">Who We Help</a>
-          <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium">About</a>
-          <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-semibold bg-primary text-white">Contact</a>
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="index.html" class="flex items-center">
+            <img 
+              src="assets/images/logo icon.png" 
+              alt="Addogo Logo" 
+              class="h-10 w-10 rounded-full object-cover border-2 border-blue-100 shadow-sm"
+              style="object-fit: contain; background: white; padding: 2px;"
+            >
+            <span class="ml-3 text-xl font-bold text-gray-900">Addogo</span>
+          </a>
         </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="solutions.html" class="nav-link">Our Solutions</a>
+          <a href="industries.html" class="nav-link">Who We Help</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="btn btn-primary ml-4">
+            Contact Us
+            <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button 
+            id="menuBtn" 
+            class="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-blue-700 bg-blue-50">
+          <div class="flex items-center">
+            <i data-lucide="home" class="w-5 h-5 mr-2"></i>
+            Home
+          </div>
+        </a>
+        <a href="solutions.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
+          <div class="flex items-center">
+            <i data-lucide="lightbulb" class="w-5 h-5 mr-2"></i>
+            Our Solutions
+          </div>
+        </a>
+        <a href="industries.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
+          <div class="flex items-center">
+            <i data-lucide="users" class="w-5 h-5 mr-2"></i>
+            Who We Help
+          </div>
+        </a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
+          <div class="flex items-center">
+            <i data-lucide="info" class="w-5 h-5 mr-2"></i>
+            About
+          </div>
+        </a>
+        <a href="contact.html" class="block px-3 py-2 text-center text-white bg-blue-600 rounded-md hover:bg-blue-700">
+          Contact Us
+        </a>
       </div>
     </div>
   </header>
 
+  <!-- Add padding for fixed header -->
+  <div class="h-16"></div>
+
   <main>
     <!-- Hero -->
-    <section class="bg-gradient-to-b from-slate-50 to-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <section class="bg-gradient-to-b from-blue-50 to-white py-16 sm:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">Simple Digital Solutions That Bring You More Customers</h1>
-            <p class="mt-4 text-lg text-slate-600">We build websites, design graphics, improve SEO, and manage social media for local businesses in Telangana.</p>
+            <p class="mt-4 text-lg text-slate-600">We build websites, design graphics, improve SEO, manage social media, and automate WhatsApp communications for businesses worldwide.</p>
             <div class="mt-6 flex flex-wrap items-center gap-3">
               <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary-700 transition">Get a Free Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
             </div>
@@ -70,49 +307,117 @@
       </div>
     </section>
 
-    <!-- Services Summary -->
-    <section class="py-16">
+    <!-- Services -->
+    <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl font-bold mb-6 text-center">Our Services</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <a href="solutions.html#websites" class="p-6 rounded-xl border border-slate-200 bg-white shadow-card hover-zoom text-center">
-            <i data-lucide="globe" class="w-6 h-6 mx-auto mb-2 text-primary"></i>
-            <div class="font-semibold">Websites</div>
-            <p class="text-sm text-slate-600 mt-1">Clean, fast, mobile-first sites that convert.</p>
-          </a>
-          <a href="solutions.html#design" class="p-6 rounded-xl border border-slate-200 bg-white shadow-card hover-zoom text-center">
-            <i data-lucide="brush" class="w-6 h-6 mx-auto mb-2 text-primary"></i>
-            <div class="font-semibold">Graphic Design</div>
-            <p class="text-sm text-slate-600 mt-1">Logos, menus, brochures, social creatives.</p>
-          </a>
-          <a href="solutions.html#seo" class="p-6 rounded-xl border border-slate-200 bg-white shadow-card hover-zoom text-center">
-            <i data-lucide="search" class="w-6 h-6 mx-auto mb-2 text-primary"></i>
-            <div class="font-semibold">SEO</div>
-            <p class="text-sm text-slate-600 mt-1">Technical fixes, local listings, ranking content.</p>
-          </a>
-          <a href="solutions.html#social" class="p-6 rounded-xl border border-slate-200 bg-white shadow-card hover-zoom text-center">
-            <i data-lucide="share-2" class="w-6 h-6 mx-auto mb-2 text-primary"></i>
-            <div class="font-semibold">Social Media</div>
-            <p class="text-sm text-slate-600 mt-1">Posting, replies, campaigns that grow presence.</p>
-          </a>
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            Our Services
+          </h2>
+          <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+            Comprehensive digital solutions to grow your business online
+          </p>
         </div>
-        <div class="text-center mt-8">
-          <a href="solutions.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md border border-slate-300 font-semibold hover:border-primary hover:text-primary">View All Details</a>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Website Development -->
+          <a href="solutions.html#websites" class="group relative overflow-hidden p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 bg-gradient-to-br from-blue-50 to-blue-100">
+            <div class="w-12 h-12 bg-white/80 rounded-lg flex items-center justify-center text-blue-600 mb-4 backdrop-blur-sm">
+              <i data-lucide="globe" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Website Development</h3>
+            <p class="text-gray-600">Clean, fast, mobile-first websites that convert visitors into customers.</p>
+            <div class="mt-4 text-blue-600 inline-flex items-center text-sm font-medium group-hover:translate-x-1 transition-transform">
+              Learn more
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+            </div>
+          </a>
+          
+          <!-- Graphic Design -->
+          <a href="solutions.html#design" class="group relative overflow-hidden p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 bg-gradient-to-br from-purple-50 to-purple-100">
+            <div class="w-12 h-12 bg-white/80 rounded-lg flex items-center justify-center text-purple-600 mb-4 backdrop-blur-sm">
+              <i data-lucide="brush" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Graphic Design</h3>
+            <p class="text-gray-600">Stunning logos, menus, brochures, and social media creatives.</p>
+            <div class="mt-4 text-blue-600 inline-flex items-center text-sm font-medium group-hover:translate-x-1 transition-transform">
+              Learn more
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+            </div>
+          </a>
+          
+          <!-- SEO Services -->
+          <a href="solutions.html#seo" class="group relative overflow-hidden p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 bg-gradient-to-br from-green-50 to-green-100">
+            <div class="w-12 h-12 bg-white/80 rounded-lg flex items-center justify-center text-green-600 mb-4 backdrop-blur-sm">
+              <i data-lucide="search" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">SEO Services</h3>
+            <p class="text-gray-600">Technical fixes, local listings, and content that ranks higher.</p>
+            <div class="mt-4 text-blue-600 inline-flex items-center text-sm font-medium group-hover:translate-x-1 transition-transform">
+              Learn more
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+            </div>
+          </a>
+          
+          <!-- Social Media -->
+          <a href="solutions.html#social" class="group relative overflow-hidden p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 bg-gradient-to-br from-pink-50 to-pink-100">
+            <div class="w-12 h-12 bg-white/80 rounded-lg flex items-center justify-center text-pink-600 mb-4 backdrop-blur-sm">
+              <i data-lucide="share-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Social Media</h3>
+            <p class="text-gray-600">Engaging content and campaigns that grow your online presence.</p>
+            <div class="mt-4 text-blue-600 inline-flex items-center text-sm font-medium group-hover:translate-x-1 transition-transform">
+              Learn more
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+            </div>
+          </a>
+          
+          <!-- WhatsApp Automation -->
+          <a href="solutions.html#whatsapp" class="group relative overflow-hidden p-6 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 bg-gradient-to-br from-emerald-50 to-emerald-100">
+            <div class="w-12 h-12 bg-white/80 rounded-lg flex items-center justify-center text-emerald-600 mb-4 backdrop-blur-sm">
+              <i data-lucide="message-circle" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">WhatsApp Automation</h3>
+            <p class="text-gray-600">Automated messaging, notifications, and customer support.</p>
+            <div class="mt-4 text-blue-600 inline-flex items-center text-sm font-medium group-hover:translate-x-1 transition-transform">
+              Learn more
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-1"></i>
+            </div>
+          </a>
+          
+          <!-- Get in Touch -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-700 p-6 rounded-xl shadow-lg text-white">
+            <h3 class="text-xl font-bold mb-3">Need Something Custom?</h3>
+            <p class="mb-6 text-blue-100">We specialize in custom digital solutions tailored to your business needs.</p>
+            <a href="contact.html" class="btn bg-white text-blue-700 hover:bg-blue-50 inline-flex items-center justify-center w-full py-3 font-medium">
+              Get a Free Quote
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-200 py-10 bg-white/70">
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-2">
-          <div class="font-semibold">Addogo</div>
+      <div class="md:flex md:items-center md:justify-between">
+        <div class="flex items-center">
+          <img 
+            src="assets/images/logo icon.png" 
+            alt="Addogo Logo" 
+            class="h-8 w-8 rounded-full object-cover border-2 border-blue-600"
+            style="object-fit: contain; background: white; padding: 2px;"
+          >
+          <span class="ml-3 text-lg font-semibold">Addogo Digital</span>
         </div>
-        <div class="text-sm text-slate-600">© 2025 Addogo. Built for Telangana SMBs.</div>
-        <div class="flex items-center gap-4 text-sm">
-          <a href="contact.html" class="hover:text-primary">Contact</a>
-          <a href="about.html" class="hover:text-primary">About</a>
+        <p class="mt-4 text-sm text-gray-400 md:mt-0">
+          © 2025 Addogo. Empowering SMBs Worldwide.
+        </p>
+        <div class="mt-4 flex space-x-6 md:mt-0">
+          <a href="contact.html" class="text-gray-400 hover:text-white">Contact</a>
+          <a href="about.html" class="text-gray-400 hover:text-white">About</a>
         </div>
       </div>
     </div>
@@ -124,6 +429,132 @@
     <i data-lucide="message-circle"></i>
   </a>
 
-  <script>lucide.createIcons();document.getElementById('menuBtn')?.addEventListener('click',()=>document.getElementById('mobileMenu')?.classList.toggle('hidden'));</script>
+  <!-- Load Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Main JavaScript -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Mobile menu functionality
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = menuBtn?.querySelector('i');
+    
+    function toggleMobileMenu(show) {
+      const isExpanded = show ?? menuBtn.getAttribute('aria-expanded') === 'true';
+      const newState = !isExpanded;
+      
+      // Update button state
+      menuBtn.setAttribute('aria-expanded', newState);
+      
+      // Toggle menu visibility with animation
+      if (newState) {
+        // Open menu
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+        
+        // Change icon to X
+        if (menuIcon) {
+          menuIcon.setAttribute('data-lucide', 'x');
+          lucide.createIcons();
+        }
+      } else {
+        // Close menu
+        mobileMenu.style.maxHeight = '0';
+        
+        // Change icon back to menu
+        if (menuIcon) {
+          menuIcon.setAttribute('data-lucide', 'menu');
+          lucide.createIcons();
+        }
+        
+        // After transition completes, hide the menu
+        setTimeout(() => {
+          if (menuBtn.getAttribute('aria-expanded') === 'false') {
+            mobileMenu.classList.add('hidden');
+          }
+        }, 300);
+      }
+      
+      // Toggle body scroll
+      document.body.style.overflow = newState ? 'hidden' : '';
+    }
+    
+    // Initialize menu state
+    if (menuBtn && mobileMenu) {
+      // Add transition for smooth height animation
+      mobileMenu.style.transition = 'max-height 0.3s ease-in-out, opacity 0.3s ease-in-out';
+      
+      // Toggle menu on button click
+      menuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMobileMenu();
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (menuBtn.getAttribute('aria-expanded') === 'true' && 
+            !menuBtn.contains(e.target) && 
+            !mobileMenu.contains(e.target)) {
+          toggleMobileMenu(false);
+        }
+      });
+      
+      // Close menu on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+          toggleMobileMenu(false);
+          menuBtn.focus();
+        }
+      });
+      
+      // Close menu when clicking on a link
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => toggleMobileMenu(false));
+      });
+    }
+    
+    // Lazy load images
+    if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        if (img.dataset.src) {
+          img.src = img.dataset.src;
+        }
+      });
+    }
+    
+    // Service Worker Registration (only in production)
+    if ('serviceWorker' in navigator && window.location.hostname !== 'localhost') {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+    
+    // Add smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80, // Account for fixed header
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,129 +1,641 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Addogo — Our Solutions</title>
-  <meta name="description" content="Websites, Graphic Design, SEO, and Social Media Management for Telangana SMBs." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Best Digital Marketing Services | Top-Rated Agency | Addogo</title>
+  <meta name="description" content="Addogo offers the best digital marketing services including SEO, PPC, social media, and web design. Partner with the top-rated digital marketing agency for guaranteed results.">
+  <meta name="keywords" content="best digital marketing services, top digital marketing agency, SEO services, PPC management, social media marketing, web design services, online marketing solutions, digital marketing company">
+  <meta name="author" content="Addogo">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="robots" content="index, follow">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Addogo">
+  <meta name="application-name" content="Addogo">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.addogo.com/solutions.html" />
+  <meta property="og:title" content="Best Digital Marketing Services | Top-Rated Agency | Addogo" />
+  <meta property="og:description" content="Addogo offers the best digital marketing services including SEO, PPC, social media, and web design. Partner with the top-rated digital marketing agency for guaranteed results." />
+  <meta property="og:image" content="https://www.addogo.com/assets/solutions-og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.addogo.com/solutions.html" />
+  <meta property="twitter:title" content="Best Digital Marketing Services | Top-Rated Agency" />
+  <meta property="twitter:description" content="Addogo offers the best digital marketing services including SEO, PPC, social media, and web design. Get a free consultation today!" />
+  <meta property="twitter:image" content="https://www.addogo.com/assets/solutions-og-image-twitter.jpg" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.addogo.com/solutions.html" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" href="assets/addogo-favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="assets/addogo-logo.png" type="image/png" />
-  <script>tailwind.config={theme:{extend:{colors:{primary:{DEFAULT:'#2563eb',700:'#1d4ed8'}},boxShadow:{card:'0 8px 24px rgba(2,6,23,.08)'}}}};</script>
+  <!-- Favicons -->
+  <link rel="icon" href="assets/images/logo icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/logo icon.png">
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            // 60% Primary - Deep Blue
+            primary: {
+              DEFAULT: '#1e40af',
+              dark: '#1e3a8a',
+              light: '#3b82f6',
+            },
+            // 30% Secondary - Soft Gray
+            secondary: {
+              DEFAULT: '#f3f4f6',
+              dark: '#e5e7eb',
+            },
+            // 10% Accent - Vibrant Teal
+            accent: {
+              DEFAULT: '#0d9488',
+              dark: '#0f766e',
+              light: '#14b8a6',
+            },
+            blue: {
+              700: '#1d4ed8'
+            }
+          },
+          boxShadow: {
+            card: '0 8px 24px rgba(2,6,23,.08)'
+          }
+        }
+      },
+      variants: {
+        extend: {
+          opacity: ['disabled'],
+          cursor: ['disabled']
+        }
+      }
+    };
+  </script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
-    .hover-zoom{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
-    .hover-zoom:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 40px rgba(2,6,23,.12)}
-    html{scroll-behavior:smooth}
-    /* tab animations */
-    .tab-panel{opacity:1;transition:opacity .3s ease}
-    .tab-hidden{opacity:0;pointer-events:none}
-    /* active tab visual */
-    .tab-btn.active{border-color:#2563eb;color:#2563eb;background:#eff6ff;box-shadow:0 8px 24px rgba(2,6,23,.06)}
+    /* Base styles and animations */
+    :root {
+      --primary: #1e40af;
+      --primary-dark: #1e3a8a;
+      --primary-light: #3b82f6;
+      --secondary: #f3f4f6;
+      --secondary-dark: #e5e7eb;
+      --accent: #0d9488;
+      --accent-dark: #0f766e;
+      --accent-light: #14b8a6;
+    }
+
+    .hover-zoom {
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s, background-color 0.3s ease;
+    }
+    .hover-zoom:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(2, 6, 23, 0.15);
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    }
+    
+    /* Tab styles */
+    .tab-panel {
+      opacity: 1;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      transform: translateY(10px);
+    }
+    
+    .tab-panel:not(.hidden) {
+      transform: translateY(0);
+    }
+    
+    .tab-hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    /* Active tab styling */
+    .tab-btn {
+      position: relative;
+      transition: all 0.3s ease;
+      background: white;
+      color: #475569;
+      font-weight: 500;
+      border-radius: 0.5rem;
+    }
+    
+    .tab-btn:hover {
+      background: #f8fafc;
+      color: #1e40af;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
+    }
+    
+    .tab-btn.active {
+      background: rgba(30, 64, 175, 0.1);
+      color: #1e40af;
+      border-color: rgba(30, 64, 175, 0.2);
+      box-shadow: 0 2px 8px rgba(30, 64, 175, 0.1);
+      font-weight: 600;
+    }
+    
+    .tab-btn.active i {
+      color: #1e40af;
+    }
+    
+    /* Card styles */
+    .service-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(203, 213, 225, 0.3);
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(2, 6, 23, 0.05);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(2, 6, 23, 0.1);
+      border-color: rgba(147, 197, 253, 0.5);
+    }
+    
+    /* FAQ styles */
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 0 1.5rem;
+      margin: 0;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 0 0 0.75rem 0.75rem;
+    }
+    
+    .faq-content.show {
+      max-height: 1000px;
+      padding: 0 1.5rem 1.5rem;
+      margin: 0;
+      overflow: visible;
+      border-top: 1px solid rgba(203, 213, 225, 0.3);
+    }
+    
+    .faq-item {
+      margin-bottom: 1rem;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid rgba(203, 213, 225, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .faq-item:hover {
+      box-shadow: 0 4px 20px rgba(2, 6, 23, 0.08);
+      border-color: rgba(147, 197, 253, 0.5);
+    }
+    
+    .faq-toggle {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #1e293b;
+      font-weight: 500;
+      transition: background-color 0.2s ease;
+    }
+    
+    .faq-toggle:hover {
+      background-color: rgba(241, 245, 249, 0.5);
+    }
+    
+    .faq-toggle i {
+      transition: transform 0.3s ease;
+      color: #3b82f6;
+    }
+    
+    .faq-toggle[aria-expanded="true"] {
+      background-color: rgba(239, 246, 255, 0.5);
+    }
+    
+    .faq-toggle[aria-expanded="true"] i {
+      transform: rotate(45deg);
+    }
+    
+    /* Main content background */
+    .main-content-bg {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .main-content-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 400px;
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      z-index: -1;
+      border-bottom-left-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+    }
+    
+    /* Tab indicator */
+    #tab-indicator {
+      height: 3px;
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Add subtle animation to cards */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .service-card {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+      animation-delay: calc(var(--delay, 0) * 0.1s);
+    }
   </style>
 </head>
-<body class="text-slate-800 antialiased bg-slate-50">
-  <header class="sticky top-0 z-50 border-b bg-white/90 backdrop-blur border-slate-200">
+<body class="text-slate-800 antialiased bg-slate-50 dark:bg-slate-900">
+  <!-- Skip to main content link for keyboard users -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed top-4 left-4 z-50 bg-white dark:bg-slate-800 text-primary font-medium px-4 py-2 rounded-md shadow-lg">
+    Skip to main content
+  </a>
+
+  <header class="sticky top-0 z-40 border-b bg-white/90 dark:bg-slate-900/90 backdrop-blur border-slate-200 dark:border-slate-700">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="h-16 flex items-center justify-between">
-        <a href="index.html" class="flex items-center gap-3">
-          <img src="assets/addogo-logo.svg" alt="Addogo" class="h-8 w-auto" onerror="this.onerror=null;this.src='assets/addogo-logo.png';" />
+        <a href="index.html" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-lg p-1.5 transition-all hover:bg-secondary/50">
+          <img 
+            src="assets/images/logo icon.png" 
+            alt="Addogo Logo" 
+            width="40" 
+            height="40" 
+            class="h-10 w-10 rounded-full object-cover border-2 border-primary/20 shadow-sm" 
+            style="object-fit: contain; background: white; padding: 2px;"
+            loading="eager"
+          />
+          <span class="text-2xl font-bold text-black dark:text-white">Addogo</span>
         </a>
-        <nav class="hidden md:flex items-center gap-1">
-          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium">Home</a>
-          <a href="solutions.html" class="px-3 py-2 rounded-md text-sm font-medium text-primary">Our Solutions</a>
-          <a href="industries.html" class="px-3 py-2 rounded-md text-sm font-medium">Who We Help</a>
-          <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium">About</a>
-          <a href="contact.html" class="ml-1 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary-700">Contact</a>
+        
+        <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
+          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors">Home</a>
+          <a href="solutions.html" class="px-3 py-2 rounded-md text-sm font-medium text-primary dark:text-blue-400 font-semibold" aria-current="page">Our Solutions</a>
+          <a href="industries.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors">Who We Help</a>
+          <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors">About</a>
+          <a href="contact.html" class="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors">
+            Contact
+            <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+          </a>
         </nav>
-        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-md border border-slate-300">
-          <i data-lucide="menu"></i>
-        </button>
+        
+        <div class="flex items-center md:hidden">
+          <button 
+            id="menuBtn" 
+            class="inline-flex items-center justify-center w-10 h-10 rounded-md border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <i data-lucide="menu" class="w-5 h-5 text-slate-700 dark:text-slate-300"></i>
+          </button>
+        </div>
       </div>
-      <div id="mobileMenu" class="hidden md:hidden pb-4">
-        <div class="grid gap-1">
-          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium">Home</a>
-          <a href="solutions.html" class="px-3 py-2 rounded-md text-sm font-medium text-primary">Our Solutions</a>
-          <a href="industries.html" class="px-3 py-2 rounded-md text-sm font-medium">Who We Help</a>
-          <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium">About</a>
-          <a href="contact.html" class="px-3 py-2 rounded-md text-sm font-semibold bg-primary text-white">Contact</a>
+      
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="hidden md:hidden pb-4" role="menu" aria-labelledby="menuBtn">
+        <div class="grid gap-1 pt-2">
+          <a href="index.html" class="px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800 transition-colors">Home</a>
+          <a href="solutions.html" class="px-3 py-2.5 rounded-md text-base font-medium bg-blue-50 text-primary dark:bg-slate-800 dark:text-blue-400" aria-current="page">Our Solutions</a>
+          <a href="industries.html" class="px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800 transition-colors">Who We Help</a>
+          <a href="about.html" class="px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800 transition-colors">About</a>
+          <a href="contact.html" class="mt-2 inline-flex items-center justify-center px-4 py-2.5 rounded-md bg-primary text-white text-base font-semibold hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors">
+            Contact Us
+            <i data-lucide="arrow-right" class="w-4 h-4 ml-1.5" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="bg-gradient-to-b from-slate-50 to-white">
-    <section class="py-12">
+  <main id="main-content" class="bg-white">
+    <section class="py-12 md:py-16 lg:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-extrabold text-center">Our Solutions</h1>
-        <p class="text-center text-slate-600 max-w-2xl mx-auto mt-3">We focus on the four essentials most SMBs need to grow online. Pick what you need now, add more later.</p>
+        <div class="text-center">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-center text-slate-900 dark:text-white">
+            Best Digital Marketing Services for Business Growth
+          </h1>
+          <p class="mt-4 text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            Partner with the top-rated digital marketing agency that delivers measurable results. Our comprehensive solutions are designed to help your business thrive in today's competitive online landscape.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+            <a 
+              href="#contact" 
+              class="inline-flex items-center justify-center px-6 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+            >
+              Get Free Consultation
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-2" aria-hidden="true"></i>
+            </a>
+            <a 
+              href="tel:+916305655342" 
+              class="inline-flex items-center justify-center px-6 py-3.5 border border-slate-300 dark:border-slate-600 text-base font-medium rounded-md text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+            >
+              <i data-lucide="phone" class="w-5 h-5 mr-2 text-primary" aria-hidden="true"></i>
+              <span>Call Now</span>
+              <span class="sr-only">Call us at +91 6305655342</span>
+            </a>
+          </div>
+        </div>
 
-        <!-- Tabs -->
-        <div class="mt-8">
-          <div class="flex flex-wrap items-center justify-center gap-2">
-            <a href="#websites" class="tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300/80 bg-white/90 font-semibold shadow-sm hover:border-primary/40 hover:text-primary/90" data-tab="websites"><i data-lucide="globe" class="w-4 h-4"></i> Websites</a>
-            <a href="#design" class="tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300/80 bg-white/90 font-semibold shadow-sm hover:border-primary/40 hover:text-primary/90" data-tab="design"><i data-lucide="brush" class="w-4 h-4"></i> Graphic Design</a>
-            <a href="#seo" class="tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300/80 bg-white/90 font-semibold shadow-sm hover:border-primary/40 hover:text-primary/90" data-tab="seo"><i data-lucide="search" class="w-4 h-4"></i> SEO</a>
-            <a href="#social" class="tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300/80 bg-white/90 font-semibold shadow-sm hover:border-primary/40 hover:text-primary/90" data-tab="social"><i data-lucide="share-2" class="w-4 h-4"></i> Social Media</a>
+        <!-- Tabs Navigation -->
+        <div class="mt-12 md:mt-16">
+          <div class="relative" role="tablist" aria-label="Digital Marketing Services">
+            <div class="flex flex-wrap items-center justify-center gap-3 bg-white/80 dark:bg-slate-800/80 p-1.5 rounded-full border border-slate-200 dark:border-slate-700 shadow-sm">
+              <button 
+                id="tab-websites"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-websites"
+                class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary dark:hover:text-primary-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 transition-all"
+                data-tab="websites"
+              >
+                <i data-lucide="globe" class="w-5 h-5 text-primary" aria-hidden="true"></i>
+                <span>Website Development</span>
+              </button>
+              
+              <button 
+                id="tab-design"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-design"
+                class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary dark:hover:text-primary-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 transition-all"
+                data-tab="design"
+                tabindex="-1"
+              >
+                <i data-lucide="brush" class="w-5 h-5 text-primary" aria-hidden="true"></i>
+                <span>Graphic Design</span>
+              </button>
+              
+              <button 
+                id="tab-seo"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-seo"
+                class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary dark:hover:text-primary-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 transition-all"
+                data-tab="seo"
+                tabindex="-1"
+              >
+                <i data-lucide="search" class="w-5 h-5 text-primary" aria-hidden="true"></i>
+                <span>SEO Services</span>
+              </button>
+              
+              <button 
+                id="tab-social"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-social"
+                class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary dark:hover:text-primary-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 transition-all"
+                data-tab="social"
+                tabindex="-1"
+              >
+                <i data-lucide="share-2" class="w-5 h-5 text-primary" aria-hidden="true"></i>
+                <span>Social Media</span>
+              </button>
+              
+              <button 
+                id="tab-whatsapp"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-whatsapp"
+                class="tab-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-primary dark:hover:text-primary-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 transition-all"
+                data-tab="whatsapp"
+                tabindex="-1"
+              >
+                <i data-lucide="message-circle" class="w-5 h-5 text-primary" aria-hidden="true"></i>
+                <span class="sr-only sm:not-sr-only">WhatsApp</span>
+              </button>
+            </div>
+            
+            <div class="absolute -bottom-1 left-0 right-0 h-0.5 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+              <div id="tab-indicator" class="h-full bg-primary transition-all duration-300 ease-out" style="width: 0%; transform: translateX(0%);"></div>
+            </div>
           </div>
 
-          <!-- Panels -->
-          <div class="mt-6 space-y-6">
-            <!-- Websites -->
-            <div id="panel-websites" class="tab-panel p-6 rounded-xl bg-gradient-to-br from-white to-blue-50/30 border border-primary/10 shadow-card">
-              <div class="grid md:grid-cols-2 gap-6 items-start">
-                <div>
-                  <h2 class="text-xl font-bold">Websites</h2>
-                  <p class="text-slate-600 mt-2">Clean, fast, mobile-first websites designed to turn visitors into customers. Built with best practices for speed, accessibility, and conversions.</p>
-                  <ul class="list-disc ml-5 mt-3 text-slate-600 text-sm">
-                    <li>Single-page starter or multi-page sites</li>
-                    <li>Booking/contact flows with WhatsApp</li>
-                    <li>Performance & basic SEO baked-in</li>
-                    <li>Analytics and contact tracking</li>
+          <!-- Tab Panels -->
+          <div class="mt-8 space-y-8 relative">
+            <!-- Websites Panel -->
+            <div 
+              id="panel-websites" 
+              role="tabpanel" 
+              tabindex="0"
+              aria-labelledby="tab-websites"
+              class="tab-panel p-6 md:p-8 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/10 border border-blue-100 dark:border-blue-800/50 shadow-card transition-all duration-300 ease-out"
+            >
+              <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                  <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+                    Professional Website Development
+                  </h2>
+                  <p class="text-slate-600 dark:text-slate-300 text-lg">
+                    Clean, fast, mobile-first websites designed to turn visitors into customers. Built with best practices for speed, accessibility, and conversions.
+                  </p>
+                  <ul class="space-y-2.5 mt-6">
+                    <li class="flex items-start">
+                      <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Single-page starter or multi-page sites</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Booking/contact flows with WhatsApp</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Performance & basic SEO baked-in</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="check-circle" class="w-5 h-5 text-primary mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Analytics and contact tracking</span>
+                    </li>
                   </ul>
-                  <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-white font-semibold hover:bg-primary-700 mt-4">Get a Quote <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                  <div class="pt-4">
+                    <a 
+                      href="contact.html" 
+                      class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-white font-semibold hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+                    >
+                      Get a Free Quote
+                      <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+                    </a>
+                  </div>
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-card aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+                <div class="relative rounded-xl overflow-hidden shadow-xl aspect-[4/3] bg-slate-100 dark:bg-slate-800">
+                  <img 
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop" 
+                    alt="Website development example" 
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  >
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div class="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 class="text-xl font-bold">Responsive Design</h3>
+                      <p class="text-slate-200 mt-1">Looks great on all devices</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Graphic Design -->
-            <div id="panel-design" class="tab-panel tab-hidden hidden p-6 rounded-xl bg-gradient-to-br from-white to-violet-50/30 border border-primary/10 shadow-card">
-              <div class="grid md:grid-cols-2 gap-6 items-start">
-                <div>
-                  <h2 class="text-xl font-bold">Graphic Design</h2>
-                  <p class="text-slate-600 mt-2">Brand assets and everyday visuals that make your business look professional across print and digital.</p>
-                  <ul class="list-disc ml-5 mt-3 text-slate-600 text-sm">
-                    <li>Logo kits, color & typography</li>
-                    <li>Menus, brochures, flyers, signage</li>
-                    <li>Social post templates & stories</li>
-                    <li>Ad creatives for Meta & Google</li>
+            <!-- Graphic Design Panel -->
+            <div 
+              id="panel-design" 
+              role="tabpanel" 
+              tabindex="0"
+              aria-labelledby="tab-design"
+              class="tab-panel tab-hidden hidden p-6 md:p-8 rounded-xl bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-900/10 border border-purple-100 dark:border-purple-800/50 shadow-card transition-all duration-300 ease-out"
+            >
+              <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                  <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+                    Professional Graphic Design
+                  </h2>
+                  <p class="text-slate-600 dark:text-slate-300 text-lg">
+                    Brand assets and everyday visuals that make your business look professional across print and digital.
+                  </p>
+                  <ul class="space-y-2.5 mt-6">
+                    <li class="flex items-start">
+                      <i data-lucide="palette" class="w-5 h-5 text-violet-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Logo kits, color & typography systems</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="file-text" class="w-5 h-5 text-violet-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Menus, brochures, flyers, and signage</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="image" class="w-5 h-5 text-violet-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Social media templates & stories</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="trending-up" class="w-5 h-5 text-violet-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">High-converting ad creatives</span>
+                    </li>
                   </ul>
-                  <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-white font-semibold hover:bg-primary-700 mt-4">Start Design <i data-lucide="pen-tool" class="w-4 h-4"></i></a>
+                  <div class="pt-4">
+                    <a 
+                      href="contact.html" 
+                      class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-white font-semibold hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+                    >
+                      Start Your Design Project
+                      <i data-lucide="pen-tool" class="w-4 h-4" aria-hidden="true"></i>
+                    </a>
+                  </div>
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-card aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+                <div class="relative rounded-xl overflow-hidden shadow-xl aspect-[4/3] bg-slate-100 dark:bg-slate-800">
+                  <img 
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop" 
+                    alt="Graphic design examples" 
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  >
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div class="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 class="text-xl font-bold">Visual Identity</h3>
+                      <p class="text-slate-200 mt-1">Consistent branding across all platforms</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- SEO -->
-            <div id="panel-seo" class="tab-panel tab-hidden hidden p-6 rounded-xl bg-gradient-to-br from-white to-emerald-50/30 border border-primary/10 shadow-card">
-              <div class="grid md:grid-cols-2 gap-6 items-start">
-                <div>
-                  <h2 class="text-xl font-bold">SEO</h2>
-                  <p class="text-slate-600 mt-2">Practical SEO for local discovery. We fix issues, optimize content, and strengthen your Google footprint.</p>
-                  <ul class="list-disc ml-5 mt-3 text-slate-600 text-sm">
-                    <li>Technical fixes and speed optimizations</li>
-                    <li>Local listings & Google Business Profile</li>
-                    <li>On-page content & schema markup</li>
-                    <li>Rank tracking and monthly reports</li>
+            <!-- SEO Panel -->
+            <div 
+              id="panel-seo" 
+              role="tabpanel" 
+              tabindex="0"
+              aria-labelledby="tab-seo"
+              class="tab-panel tab-hidden hidden p-6 md:p-8 rounded-xl bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/30 dark:to-green-900/10 border border-green-100 dark:border-green-800/50 shadow-card transition-all duration-300 ease-out"
+            >
+              <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                  <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+                    Search Engine Optimization
+                  </h2>
+                  <p class="text-slate-600 dark:text-slate-300 text-lg">
+                    Practical SEO for local discovery. We fix issues, optimize content, and strengthen your Google footprint.
+                  </p>
+                  <ul class="space-y-2.5 mt-6">
+                    <li class="flex items-start">
+                      <i data-lucide="zap" class="w-5 h-5 text-emerald-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Technical fixes and speed optimizations</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="map-pin" class="w-5 h-5 text-emerald-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Local listings & Google Business Profile</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="file-text" class="w-5 h-5 text-emerald-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">On-page content & schema markup</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="bar-chart-2" class="w-5 h-5 text-emerald-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Rank tracking and monthly reports</span>
+                    </li>
                   </ul>
-                  <a href="contact.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-primary text-white font-semibold hover:bg-primary-700 mt-4">Improve Rankings <i data-lucide="trending-up" class="w-4 h-4"></i></a>
+                  <div class="pt-4">
+                    <a 
+                      href="contact.html" 
+                      class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-white font-semibold hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+                    >
+                      Improve Your Rankings
+                      <i data-lucide="trending-up" class="w-4 h-4" aria-hidden="true"></i>
+                    </a>
+                  </div>
                 </div>
-                <div class="rounded-lg overflow-hidden shadow-card aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1529078155058-5d716f45d604?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+                <div class="relative rounded-xl overflow-hidden shadow-xl aspect-[4/3] bg-slate-100 dark:bg-slate-800">
+                  <img 
+                    src="https://images.unsplash.com/photo-1529078155058-5d716f45d604?q=80&w=1600&auto=format&fit=crop" 
+                    alt="SEO optimization dashboard" 
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  >
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <div class="text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 class="text-xl font-bold">SEO Analytics</h3>
+                      <p class="text-slate-200 mt-1">Track your growth and performance</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <!-- Social -->
-            <div id="panel-social" class="tab-panel tab-hidden hidden p-6 rounded-xl bg-gradient-to-br from-white to-amber-50/30 border border-primary/10 shadow-card">
+            <div id="panel-social" class="tab-panel tab-hidden hidden p-6 rounded-xl bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/30 dark:to-pink-900/10 border border-pink-100 dark:border-pink-800/50 shadow-card">
               <div class="grid md:grid-cols-2 gap-6 items-start">
                 <div>
                   <h2 class="text-xl font-bold">Social Media Management</h2>
@@ -139,20 +651,276 @@
                 <div class="rounded-lg overflow-hidden shadow-card aspect-[4/3] bg-[url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
               </div>
             </div>
+
+            <!-- WhatsApp Automation Panel -->
+            <div 
+              id="panel-whatsapp" 
+              role="tabpanel" 
+              tabindex="0"
+              aria-labelledby="tab-whatsapp"
+              class="tab-panel tab-hidden hidden p-6 md:p-8 rounded-xl bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/30 dark:to-emerald-900/10 border border-emerald-100 dark:border-emerald-800/50 shadow-card transition-all duration-300 ease-out"
+            >
+              <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                  <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">
+                    WhatsApp Business Automation
+                  </h2>
+                  <p class="text-slate-600 dark:text-slate-300 text-lg">
+                    Automate customer interactions, notifications, and support with our WhatsApp Business solutions. Engage with customers 24/7 and streamline your business communication.
+                  </p>
+                  <ul class="space-y-2.5 mt-6">
+                    <li class="flex items-start">
+                      <i data-lucide="message-square" class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Automated greetings & quick replies</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="bell" class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Appointment reminders & notifications</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="package" class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Order updates & tracking</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="headphones" class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">24/7 customer support automation</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i data-lucide="globe" class="w-5 h-5 text-green-500 mt-0.5 mr-2 flex-shrink-0" aria-hidden="true"></i>
+                      <span class="text-slate-700 dark:text-slate-300">Multi-language support</span>
+                    </li>
+                  </ul>
+                  <div class="pt-4">
+                    <a 
+                      href="contact.html" 
+                      class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-white font-semibold hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+                    >
+                      Get WhatsApp Automation
+                      <i data-lucide="message-circle" class="w-4 h-4" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="relative h-full">
+                  <div class="relative rounded-xl overflow-hidden shadow-2xl h-full max-w-md mx-auto border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex flex-col">
+                    <!-- Header -->
+                    <div class="bg-[#00a884] p-3 flex items-center">
+                      <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-2 flex-shrink-0">
+                        <i data-lucide="message-circle" class="w-5 h-5 text-[#00a884]"></i>
+                      </div>
+                      <div class="min-w-0">
+                        <div class="text-white font-medium truncate">WhatsApp Business</div>
+                        <div class="text-xs text-white/90">Online</div>
+                      </div>
+                      <button class="ml-auto text-white/90 hover:text-white transition-colors">
+                        <i data-lucide="more-vertical" class="w-5 h-5"></i>
+                        <span class="sr-only">More options</span>
+                      </button>
+                    </div>
+                    
+                    <!-- Chat Screenshot -->
+                    <div class="bg-[#e5ddd5] dark:bg-slate-700 p-4 flex-1 overflow-y-auto">
+                      <div class="max-w-[80%] mb-4">
+                        <div class="bg-white dark:bg-slate-600 p-3 rounded-lg rounded-tl-none shadow-sm">
+                          <p class="text-sm dark:text-slate-100">Welcome to our WhatsApp Business service! How can we assist you today?</p>
+                          <p class="text-xs text-gray-500 dark:text-slate-300 mt-1">10:30 AM</p>
+                        </div>
+                      </div>
+                      
+                      <div class="flex justify-end mb-4">
+                        <div class="bg-[#d9fdd3] dark:bg-emerald-900 p-3 rounded-lg rounded-tr-none shadow-sm max-w-[80%]">
+                          <p class="text-sm dark:text-slate-100">Hi, I'd like to know more about your services</p>
+                          <p class="text-xs text-gray-500 dark:text-slate-300 mt-1 text-right">✓✓ 10:31 AM</p>
+                        </div>
+                      </div>
+                      
+                      <div class="max-w-[80%] mb-4">
+                        <div class="bg-white dark:bg-slate-600 p-3 rounded-lg rounded-tl-none shadow-sm">
+                          <div class="flex items-center mb-1">
+                            <span class="font-medium text-sm dark:text-white">Business Assistant</span>
+                            <span class="text-xs text-gray-400 dark:text-slate-300 ml-2 bg-gray-100 dark:bg-slate-700 px-2 py-0.5 rounded-full">BOT</span>
+                          </div>
+                          <p class="text-sm dark:text-slate-100">I'm here to help! We offer automated responses, appointment scheduling, and order tracking. What would you like to know more about?</p>
+                          <p class="text-xs text-gray-500 dark:text-slate-300 mt-1">10:31 AM</p>
+                        </div>
+                      </div>
+                      
+                      <!-- Quick Reply Buttons -->
+                      <div class="max-w-[80%] mb-4">
+                        <div class="space-y-2">
+                          <button class="text-sm bg-white dark:bg-slate-600 text-left p-2 rounded-lg shadow-sm border border-gray-200 dark:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-500 transition-colors w-full">
+                            Pricing plans
+                          </button>
+                          <button class="text-sm bg-white dark:bg-slate-600 text-left p-2 rounded-lg shadow-sm border border-gray-200 dark:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-500 transition-colors w-full">
+                            Book a demo
+                          </button>
+                          <button class="text-sm bg-white dark:bg-slate-600 text-left p-2 rounded-lg shadow-sm border border-gray-200 dark:border-slate-500 hover:bg-gray-50 dark:hover:bg-slate-500 transition-colors w-full">
+                            Contact sales
+                          </button>
+                        </div>
+                      </div>
+                      
+                      <!-- Typing indicator -->
+                      <div class="flex items-center space-x-1 bg-white dark:bg-slate-600 p-2 rounded-full w-16 shadow-sm mt-2">
+                        <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0s"></div>
+                        <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                        <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+                      </div>
+                    </div>
+                    
+                    <!-- Input area -->
+                    <div class="p-3 border-t border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 flex items-center">
+                      <button class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 p-1 focus:outline-none">
+                        <i data-lucide="plus-circle" class="w-6 h-6"></i>
+                        <span class="sr-only">Add attachment</span>
+                      </button>
+                      <input 
+                        type="text" 
+                        placeholder="Type a message" 
+                        class="flex-1 bg-gray-100 dark:bg-slate-700 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 mx-2" 
+                        value=""
+                        aria-label="Type your message"
+                      >
+                      <button class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 p-1 focus:outline-none">
+                        <i data-lucide="mic" class="w-6 h-6"></i>
+                        <span class="sr-only">Record voice message</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-secondary" id="faq">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Frequently Asked Questions</h2>
+          <p class="mt-4 text-lg text-slate-600">Get answers to common questions about our digital marketing services</p>
+        </div>
+        
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-visible">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+              <span class="text-lg font-semibold text-slate-800">How long does it take to see results from SEO?</span>
+              <i data-lucide="plus" class="w-5 h-5 text-primary transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 pt-0 text-slate-600 border-t border-slate-100">
+              <p>SEO is a long-term strategy, and the timeline for seeing results can vary based on several factors including your industry, competition, and current website health. Typically, you can expect to see initial improvements in 3-6 months, with more significant results building over 6-12 months. We provide monthly reports to track your progress and make data-driven adjustments to your strategy.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-visible">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+              <span class="text-lg font-semibold text-slate-800">What's included in your website development packages?</span>
+              <i data-lucide="plus" class="w-5 h-5 text-primary transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 pt-0 text-slate-600 border-t border-slate-100">
+              <p>Our website development packages include:</p>
+              <ul class="list-disc pl-5 mt-2 space-y-1">
+                <li>Custom, mobile-responsive design</li>
+                <li>SEO-optimized structure and content</li>
+                <li>Contact forms with spam protection</li>
+                <li>Basic on-page SEO setup</li>
+                <li>Google Analytics integration</li>
+                <li>Social media integration</li>
+                <li>Basic training on content management</li>
+                <li>1 month of technical support</li>
+              </ul>
+              <p class="mt-3">We offer different tiers to match your specific business needs and budget.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-visible">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+              <span class="text-lg font-semibold text-slate-800">How do you measure the success of social media campaigns?</span>
+              <i data-lucide="plus" class="w-5 h-5 text-primary transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 pt-0 text-slate-600 border-t border-slate-100">
+              <p>We track multiple key performance indicators (KPIs) to measure social media success, including:</p>
+              <ul class="list-disc pl-5 mt-2 space-y-1">
+                <li><strong>Engagement Rate:</strong> Likes, comments, shares, and saves</li>
+                <li><strong>Reach & Impressions:</strong> How many people see your content</li>
+                <li><strong>Click-Through Rate (CTR):</strong> How many people click on your links</li>
+                <li><strong>Follower Growth:</strong> Increase in your social following</li>
+                <li><strong>Conversion Rate:</strong> How many users take desired actions</li>
+                <li><strong>Return on Ad Spend (ROAS):</strong> For paid campaigns</li>
+              </ul>
+              <p class="mt-3">We provide monthly reports with these metrics and insights to help refine your strategy.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-visible">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+              <span class="text-lg font-semibold text-slate-800">What makes your WhatsApp Automation different from regular WhatsApp Business?</span>
+              <i data-lucide="plus" class="w-5 h-5 text-primary transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 pt-0 text-slate-600 border-t border-slate-100">
+              <p>Our WhatsApp Automation goes beyond the basic WhatsApp Business app by offering:</p>
+              <ul class="list-disc pl-5 mt-2 space-y-1">
+                <li><strong>Advanced Automation:</strong> Set up complex workflows for customer interactions</li>
+                <li><strong>Multi-user Access:</strong> Multiple team members can manage conversations</li>
+                <li><strong>CRM Integration:</strong> Connect with your existing customer database</li>
+                <li><strong>Broadcast Messaging:</strong> Send updates to multiple contacts at once</li>
+                <li><strong>Analytics Dashboard:</strong> Track response times, resolution rates, and customer satisfaction</li>
+                <li><strong>24/7 Automated Responses:</strong> Even when your team is offline</li>
+              </ul>
+              <p class="mt-3">This leads to better customer service, increased efficiency, and more sales opportunities.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-slate-200 overflow-visible">
+            <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-slate-50 transition-colors">
+              <span class="text-lg font-semibold text-slate-800">How much should I budget for digital marketing?</span>
+              <i data-lucide="plus" class="w-5 h-5 text-primary transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-5 pt-0 text-slate-600 border-t border-slate-100">
+              <p>Digital marketing budgets can vary widely based on your business goals, industry, and competition. Here's a general guideline:</p>
+              <ul class="list-disc pl-5 mt-2 space-y-1">
+                <li><strong>Small Businesses:</strong> $1,000 - $5,000/month for essential services</li>
+                <li><strong>Medium Businesses:</strong> $5,000 - $15,000/month for more comprehensive strategies</li>
+                <li><strong>Enterprise:</strong> $15,000+/month for full-scale digital transformation</li>
+              </ul>
+              <p class="mt-3">Most businesses allocate 7-12% of their total revenue to marketing, with digital marketing making up 45-55% of that budget. We offer flexible packages and can work with your budget to maximize ROI. Book a free consultation to get a customized quote.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-slate-600 mb-6">Have more questions? We're here to help!</p>
+          <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary-700">
+            Contact Our Team
+            <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-200 py-10 bg-white/70">
+  <footer class="border-t border-slate-200 py-12 bg-gradient-to-b from-primary to-primary-dark text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-md bg-primary text-white grid place-items-center font-bold">A</div>
-          <div class="font-semibold">Addogo Digital</div>
+        <div class="flex items-center gap-3">
+          <img 
+            src="assets/images/logo icon.png" 
+            alt="Addogo Logo" 
+            width="32" 
+            height="32" 
+            class="h-8 w-8 rounded-full object-cover border-2 border-white/20" 
+            style="object-fit: contain; background: white; padding: 2px;"
+            loading="lazy"
+          />
+          <div class="font-semibold text-white">Addogo Digital</div>
         </div>
-        <div class="text-sm text-slate-600">© 2025 Addogo. Built for Telangana SMBs.</div>
+        <div class="text-sm text-slate-600">© 2025 Addogo. Empowering SMBs Worldwide.</div>
         <div class="flex items-center gap-4 text-sm">
           <a href="contact.html" class="hover:text-primary">Contact</a>
           <a href="about.html" class="hover:text-primary">About</a>
@@ -163,42 +931,590 @@
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/916305655342?text=Hi%20Addogo%2C%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener" title="Chat on WhatsApp"
-     class="fixed bottom-5 right-5 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white grid place-items-center shadow-xl">
+     class="fixed bottom-6 right-24 w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white grid place-items-center shadow-xl z-90">
     <i data-lucide="message-circle"></i>
   </a>
 
   <script>
+    // Initialize Lucide icons
     lucide.createIcons();
-    document.getElementById('menuBtn')?.addEventListener('click',()=>document.getElementById('mobileMenu')?.classList.toggle('hidden'));
-
-    // Tabs with hash support
-    const tabs = ['websites','design','seo','social'];
-    const btns = document.querySelectorAll('.tab-btn');
-    const panels = {
-      websites: document.getElementById('panel-websites'),
-      design: document.getElementById('panel-design'),
-      seo: document.getElementById('panel-seo'),
-      social: document.getElementById('panel-social'),
-    };
-    function activate(name){
-      btns.forEach(b=> b.classList.toggle('active', b.dataset.tab===name));
-      Object.entries(panels).forEach(([k,el])=>{
-        if(!el) return;
-        if (k===name){
-          el.classList.remove('hidden');
-          requestAnimationFrame(()=> el.classList.remove('tab-hidden'));
-        } else {
-          el.classList.add('tab-hidden');
-          setTimeout(()=> el.classList.add('hidden'), 250);
+    
+    // Mobile menu functionality with focus trap
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const firstNavItem = document.querySelector('.mobile-nav-link');
+    const lastNavItem = document.querySelector('.mobile-nav-link:last-child');
+    const closeMenuBtn = document.querySelector('[aria-label="Close menu"]');
+    
+    function toggleMobileMenu(show) {
+      const isExpanded = show ?? menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden', isExpanded);
+      mobileMenu.classList.toggle('opacity-0', isExpanded);
+      mobileMenu.classList.toggle('opacity-100', !isExpanded);
+      
+      // Toggle body scroll
+      document.body.style.overflow = isExpanded ? '' : 'hidden';
+      
+      // Focus management
+      if (!isExpanded) {
+        firstNavItem?.focus();
+      } else {
+        menuBtn.focus();
+      }
+    }
+    
+    // Mobile menu event listeners
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => toggleMobileMenu());
+      closeMenuBtn?.addEventListener('click', () => toggleMobileMenu(true));
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+          toggleMobileMenu(true);
+        }
+      });
+      
+      // Keyboard navigation for mobile menu
+      document.addEventListener('keydown', (e) => {
+        if (mobileMenu.classList.contains('hidden')) return;
+        
+        // Close on Escape
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          toggleMobileMenu(true);
+          return;
+        }
+        
+        // Trap focus within menu
+        if (e.key === 'Tab') {
+          if (e.shiftKey && document.activeElement === firstNavItem) {
+            e.preventDefault();
+            lastNavItem.focus();
+          } else if (!e.shiftKey && document.activeElement === lastNavItem) {
+            e.preventDefault();
+            firstNavItem.focus();
+          }
         }
       });
     }
-    function fromHash(){
-      const h = location.hash.replace('#','');
-      activate(tabs.includes(h)?h:'websites');
+
+    // Enhanced Tabs with better accessibility and smooth transitions
+    const tabs = ['websites', 'design', 'seo', 'social', 'whatsapp'];
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+    const tabIndicator = document.createElement('div');
+    tabIndicator.id = 'tab-indicator';
+    tabIndicator.className = 'absolute bottom-0 left-0 h-1 bg-primary transition-all duration-300 ease-in-out';
+    document.querySelector('[role="tablist"]').appendChild(tabIndicator);
+    
+    function setActiveTab(tabId, focus = false) {
+      // Update tab buttons
+      tabButtons.forEach(button => {
+        const isSelected = button.getAttribute('data-tab') === tabId;
+        button.setAttribute('aria-selected', isSelected);
+        button.setAttribute('tabindex', isSelected ? '0' : '-1');
+        button.classList.toggle('active', isSelected);
+        
+        if (isSelected && focus) {
+          button.focus();
+        }
+      });
+      
+      // Update tab panels with smooth transitions
+      tabPanels.forEach(panel => {
+        if (panel.id === `panel-${tabId}`) {
+          panel.classList.remove('hidden');
+          panel.setAttribute('aria-hidden', 'false');
+          setTimeout(() => {
+            panel.classList.remove('opacity-0');
+            panel.classList.add('opacity-100');
+          }, 10);
+        } else {
+          panel.classList.add('opacity-0');
+          panel.setAttribute('aria-hidden', 'true');
+          setTimeout(() => {
+            if (panel.id !== `panel-${tabId}`) {
+              panel.classList.add('hidden');
+            }
+          }, 300);
+        }
+      });
+      
+      // Update URL hash without scrolling
+      if (history.pushState) {
+        history.pushState(null, null, `#${tabId}`);
+      } else {
+        window.location.hash = `#${tabId}`;
+      }
+      
+      // Update tab indicator position
+      updateTabIndicator(tabId);
+      
+      // Focus the panel for screen readers
+      const activePanel = document.getElementById(`panel-${tabId}`);
+      if (activePanel && !focus) {
+        activePanel.setAttribute('tabindex', '0');
+        activePanel.focus();
+      }
     }
-    window.addEventListener('hashchange', fromHash);
-    fromHash();
+    
+    function updateTabIndicator(tabId) {
+      const activeTab = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
+      if (!activeTab || !tabIndicator) return;
+      
+      const container = activeTab.closest('[role="tablist"]');
+      const containerRect = container.getBoundingClientRect();
+      const tabRect = activeTab.getBoundingClientRect();
+      
+      const indicatorWidth = tabRect.width;
+      const indicatorPosition = tabRect.left - containerRect.left;
+      
+      tabIndicator.style.width = `${indicatorWidth}px`;
+      tabIndicator.style.transform = `translateX(${indicatorPosition}px)`;
+    }
+    
+    // Initialize tabs
+    function initTabs() {
+      // Set up click handlers for tabs
+      tabButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          const tabId = button.getAttribute('data-tab');
+          setActiveTab(tabId, true);
+        });
+        
+        // Keyboard navigation for tabs
+        button.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const tabId = button.getAttribute('data-tab');
+            setActiveTab(tabId, true);
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            const nextTab = button.nextElementSibling || tabButtons[0];
+            nextTab.focus();
+          } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const prevTab = button.previousElementSibling || tabButtons[tabButtons.length - 1];
+            prevTab.focus();
+          } else if (e.key === 'Home') {
+            e.preventDefault();
+            tabButtons[0].focus();
+          } else if (e.key === 'End') {
+            e.preventDefault();
+            tabButtons[tabButtons.length - 1].focus();
+          }
+        });
+      });
+      
+      // Check URL hash on load
+      const hash = window.location.hash.substring(1);
+      const defaultTab = tabButtons.length > 0 ? tabButtons[0].getAttribute('data-tab') : '';
+      const initialTab = tabs.includes(hash) ? hash : defaultTab;
+      
+      if (initialTab) {
+        setActiveTab(initialTab);
+      }
+      
+      // Update tab indicator on window resize
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          const activeTab = document.querySelector('.tab-btn[aria-selected="true"]');
+          if (activeTab) {
+            const tabId = activeTab.getAttribute('data-tab');
+            updateTabIndicator(tabId);
+          }
+        }, 250);
+      });
+    }
+    
+    // Initialize everything when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      initTabs();
+      
+      // Handle back/forward navigation
+      window.addEventListener('popstate', () => {
+        const hash = window.location.hash.substring(1);
+        if (tabs.includes(hash)) {
+          setActiveTab(hash);
+        }
+      });
+    });
+
+    // FAQ Accordion Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const faqToggles = document.querySelectorAll('.faq-toggle');
+      
+      faqToggles.forEach(toggle => {
+        // Add click event to each FAQ toggle
+        toggle.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const icon = this.querySelector('i');
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          
+          // Toggle the content
+          if (content.style.maxHeight) {
+            // Close the current item
+            content.style.maxHeight = '0';
+            content.classList.add('hidden');
+            content.classList.remove('show');
+            icon.setAttribute('data-lucide', 'plus');
+            this.setAttribute('aria-expanded', 'false');
+            
+            // Reset max-height after transition
+            setTimeout(() => {
+              if (content.classList.contains('hidden')) {
+                content.style.maxHeight = '0';
+              }
+            }, 500);
+          } else {
+            // Close all other open items
+            document.querySelectorAll('.faq-content').forEach(item => {
+              if (item !== content) {
+                item.style.maxHeight = null;
+                item.classList.add('hidden');
+              }
+            });
+            
+            // Update all icons to plus
+            document.querySelectorAll('.faq-toggle i').forEach(i => {
+              if (i !== icon) {
+                i.setAttribute('data-lucide', 'plus');
+              }
+            });
+            
+            // Update all buttons to not expanded
+            document.querySelectorAll('.faq-toggle').forEach(btn => {
+              if (btn !== this) {
+                btn.setAttribute('aria-expanded', 'false');
+              }
+            });
+            
+            // Open current item
+            content.classList.remove('hidden');
+            content.classList.add('show');
+            // Set a large max-height to ensure all content is visible
+            content.style.maxHeight = '2000px';
+            icon.setAttribute('data-lucide', 'minus');
+            this.setAttribute('aria-expanded', 'true');
+            
+            // Update Lucide icons
+            lucide.createIcons();
+            
+            // Scroll to make the content visible
+            setTimeout(() => {
+              this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 50);
+          }
+          
+          // Smooth scroll to the question if opening
+          if (!isExpanded) {
+            this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        });
+        
+        // Initialize ARIA attributes
+        toggle.setAttribute('aria-expanded', 'false');
+        if (!toggle.hasAttribute('aria-controls')) {
+          toggle.setAttribute('aria-controls', toggle.nextElementSibling.id || `faq-${Math.random().toString(36).substr(2, 9)}`);
+        }
+      });
+      
+      // If URL has #faq hash, scroll to FAQ section after page loads
+      if (window.location.hash === '#faq') {
+        const faqSection = document.getElementById('faq');
+        if (faqSection) {
+          setTimeout(() => {
+            faqSection.scrollIntoView({ behavior: 'smooth' });
+          }, 300);
+        }
+      }
+    });
+  </script>
+  
+  <!-- Website Chatbot -->
+  <div id="website-chatbot" class="fixed bottom-6 right-6 z-[100]">
+    <!-- Chatbot Toggle Button -->
+    <button id="chatbot-toggle" class="w-16 h-16 bg-gradient-to-br from-accent to-accent-dark text-white rounded-full shadow-2xl flex items-center justify-center hover:from-accent-dark hover:to-accent-dark/90 transition-all transform hover:scale-105 focus:outline-none ring-4 ring-accent/20">
+      <i data-lucide="message-circle" class="w-7 h-7"></i>
+    </button>
+    
+    <!-- Chatbot Container -->
+    <div id="chatbot-container" class="hidden absolute bottom-full right-0 mb-4 w-80 bg-white rounded-xl shadow-xl overflow-hidden flex flex-col" style="height: 500px;">
+      <!-- Chat Header -->
+      <div class="bg-primary text-white p-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-2">
+            <i data-lucide="bot" class="w-4 h-4 text-primary"></i>
+          </div>
+          <div>
+            <h3 class="font-medium">Addogo Assistant</h3>
+            <p class="text-xs opacity-80">We're here to help</p>
+          </div>
+        </div>
+        <button id="chatbot-close" class="text-white hover:text-gray-200">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      
+      <!-- Chat Messages -->
+      <div id="chat-messages" class="flex-1 p-4 overflow-y-auto bg-gray-50">
+        <!-- Welcome Message -->
+        <div class="mb-4">
+          <div class="bg-white p-3 rounded-lg shadow-sm max-w-[85%]">
+            <div class="flex items-center mb-1">
+              <span class="font-medium text-sm">Addogo Bot</span>
+              <span class="text-xs text-gray-400 ml-2">BOT</span>
+            </div>
+            <p class="text-sm">Hello! I'm your Addogo assistant. How can I help you today? 😊</p>
+            <p class="text-xs text-gray-500 mt-1">Just now</p>
+          </div>
+        </div>
+        
+        <!-- Quick Options -->
+        <div class="flex flex-wrap gap-2 mb-4">
+          <button class="quick-option text-xs bg-white hover:bg-gray-100 px-3 py-1.5 rounded-full border border-gray-200 transition-colors">
+            Services
+          </button>
+          <button class="quick-option text-xs bg-white hover:bg-gray-100 px-3 py-1.5 rounded-full border border-gray-200 transition-colors">
+            Pricing
+          </button>
+          <button class="quick-option text-xs bg-white hover:bg-gray-100 px-3 py-1.5 rounded-full border border-gray-200 transition-colors">
+            Contact Us
+          </button>
+        </div>
+      </div>
+      
+      <!-- Chat Input -->
+      <div class="p-3 border-t bg-white">
+        <div class="relative">
+          <input 
+            type="text" 
+            id="chat-input" 
+            placeholder="Type your message..." 
+            class="w-full bg-gray-100 rounded-full px-4 py-2 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
+          >
+          <button id="send-message" class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-primary">
+            <i data-lucide="send" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Chatbot functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const chatbotToggle = document.getElementById('chatbot-toggle');
+      const chatbotContainer = document.getElementById('chatbot-container');
+      const chatMessages = document.getElementById('chat-messages');
+      const chatInput = document.getElementById('chat-input');
+      const sendButton = document.getElementById('send-message');
+      const closeButton = document.getElementById('chatbot-close');
+      const quickOptions = document.querySelectorAll('.quick-option');
+      
+      let isOpen = false;
+      
+      // Toggle chat window
+      chatbotToggle.addEventListener('click', function() {
+        isOpen = !isOpen;
+        chatbotContainer.classList.toggle('hidden', !isOpen);
+        
+        // Update icon
+        const icon = chatbotToggle.querySelector('i');
+        if (isOpen) {
+          icon.setAttribute('data-lucide', 'x');
+          chatInput.focus();
+        } else {
+          icon.setAttribute('data-lucide', 'message-circle');
+        }
+        lucide.createIcons();
+      });
+      
+      // Close chat window
+      closeButton.addEventListener('click', function() {
+        isOpen = false;
+        chatbotContainer.classList.add('hidden');
+        const icon = chatbotToggle.querySelector('i');
+        icon.setAttribute('data-lucide', 'message-circle');
+        lucide.createIcons();
+      });
+      
+      // Send message on Enter key
+      chatInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && chatInput.value.trim() !== '') {
+          sendMessage(chatInput.value.trim());
+          chatInput.value = '';
+        }
+      });
+      
+      // Send message on button click
+      sendButton.addEventListener('click', function() {
+        if (chatInput.value.trim() !== '') {
+          sendMessage(chatInput.value.trim());
+          chatInput.value = '';
+        }
+      });
+      
+      // Quick options
+      quickOptions.forEach(option => {
+        option.addEventListener('click', function() {
+          const text = this.textContent.trim();
+          sendMessage(text);
+        });
+      });
+      
+      function getBotResponse(userMessage) {
+        const lowerMessage = userMessage.toLowerCase();
+        
+        // Common greetings
+        if (/(hi|hello|hey|greetings|good\s*(morning|afternoon|evening))/i.test(lowerMessage)) {
+          const greetings = [
+            "Hello! I'm Addogo's AI assistant. How can I help you with your digital marketing needs today?",
+            "Hi there! Welcome to Addogo. What can I help you with today?",
+            "Hello! Thanks for reaching out. How can I assist you with your digital marketing?"
+          ];
+          return greetings[Math.floor(Math.random() * greetings.length)];
+        }
+        
+        // Website development
+        if (/(website|web design|web development|create a site|build a website)/i.test(lowerMessage)) {
+          const responses = [
+            "Our custom website development starts at just ₹15,000. We create mobile-responsive, SEO-friendly sites designed to convert visitors. What type of website do you need?",
+            "We build professional websites starting at ₹15,000. Our packages include responsive design, basic SEO, and content management. Would you like to discuss your project?",
+            "For a basic business website, we charge ₹15,000. This includes up to 5 pages, mobile optimization, and contact forms. Need more details?"
+          ];
+          return responses[Math.floor(Math.random() * responses.length)];
+        }
+        
+        // SEO services
+        if (/(seo|search engine optimization|rank higher|google ranking|organic traffic)/i.test(lowerMessage)) {
+          const responses = [
+            "Our SEO services start at ₹10,000/month. We provide comprehensive optimization including keyword research, on-page SEO, and monthly reports. Would you like a free website audit?",
+            "We offer SEO packages beginning at ₹10,000 per month. Our team works on improving your search rankings through proven strategies. How can we help you rank better?",
+            "Starting at ₹10,000/month, our SEO services include technical optimization, content strategy, and performance tracking. Ready to boost your online visibility?"
+          ];
+          return responses[Math.floor(Math.random() * responses.length)];
+        }
+        
+        // Social media
+        if (/(social media|facebook|instagram|linkedin|posting|content creation)/i.test(lowerMessage)) {
+          const responses = [
+            "Our social media management starts at ₹8,000/month. We handle content creation, posting, and engagement across your platforms. Which social networks are you interested in?",
+            "From ₹8,000/month, we manage your social media presence with custom content and strategy. Let's discuss your goals!",
+            "Our social media packages begin at ₹8,000 monthly, including content creation and community management. What's your business niche?"
+          ];
+          return responses[Math.floor(Math.random() * responses.length)];
+        }
+        
+        // WhatsApp automation
+        if (/(whatsapp|automation|chatbot|auto reply|business api)/i.test(lowerMessage)) {
+          const responses = [
+            "Our WhatsApp Business solutions start at ₹5,000/month. We can set up automated responses, notifications, and more. Would you like to see a demo?",
+            "Starting at ₹5,000/month, we automate your WhatsApp for customer support and engagement. What kind of automation do you need?",
+            "We implement WhatsApp automation from ₹5,000/month, helping you engage customers 24/7. Let me know what you'd like to automate!"
+          ];
+          return responses[Math.floor(Math.random() * responses.length)];
+        }
+        
+        // Pricing
+        if (/(price|cost|how much|pricing|package|plan)/i.test(lowerMessage)) {
+          const responses = [
+            "Here's our pricing structure:\n\n- Website Development: From ₹15,000\n- SEO Services: From ₹10,000/month\n- Social Media: From ₹8,000/month\n- WhatsApp Automation: From ₹5,000/month\n\nWould you like a custom quote?",
+            "Our service rates are flexible:\n\n• Basic Website: ₹15,000\n• SEO Campaigns: ₹10,000+/month\n• Social Media: ₹8,000+/month\n• WhatsApp Tools: ₹5,000+/month\n\nNeed more details on any service?",
+            "Pricing overview:\n\n📱 Website: ₹15,000+\n🔍 SEO: ₹10,000+/month\n📱 Social: ₹8,000+/month\n💬 WhatsApp: ₹5,000+/month\n\nWhat best fits your needs?"
+          ];
+          return responses[Math.floor(Math.random() * responses.length)];
+        }
+        
+        // Contact information
+        if (/(contact|phone|number|email|address|location|where are you)/i.test(lowerMessage)) {
+          const responses = [
+            "📞 Call us: +91 6305655342\n📧 Email: addogo.com@addogo.com\n📍 Location: BN Reddy, Hyderabad 500070\n\nAvailable Mon-Sat, 9 AM - 6 PM IST. Want to schedule a call?",
+            "Reach us at:\n\n• Phone/WhatsApp: +91 6305655342\n• Email: addogo.com@addogo.com\n• Address: BN Reddy, Hyderabad 500070\n\nWhen would be a good time to connect?"
+          ];
+          return responses[Math.floor(Math.random() * responses.length)];
+        }
+        
+        // Working hours
+        if (/(hour|time|open|available|when are you open)/i.test(lowerMessage)) {
+          const responses = [
+            "⏰ Our hours:\n\n• Monday - Saturday: 9:00 AM - 6:00 PM IST\n• Sunday: Closed\n\nNeed to schedule outside these hours? Let us know!",
+            "We're available:\n\n📅 Monday to Saturday\n🕘 9:00 AM - 6:00 PM IST\n\nClosed on Sundays and public holidays. Want to book an appointment?"
+          ];
+          return responses[Math.floor(Math.random() * responses.length)];
+        }
+        
+        // Fallback responses
+        const fallbackResponses = [
+          "I'm here to help with your digital marketing needs. Could you please rephrase your question or ask about our services like website development, SEO, social media, or WhatsApp automation?",
+          "I want to make sure I understand your question correctly. Could you provide more details about what you're looking for?",
+          "Thanks for your message! For more specific assistance, you might want to ask about our services like website development, SEO, social media management, or WhatsApp automation.",
+          "I'm here to help! Could you let me know which of our services you're interested in? We offer website development, SEO, social media management, and WhatsApp automation solutions.",
+          "I'd be happy to assist you! Could you tell me more about what you're trying to achieve with your digital marketing?"
+        ];
+        
+        return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
+      }
+      
+      function sendMessage(message) {
+        // Add user message
+        addMessage(message, 'user');
+        
+        // Show typing indicator
+        const typingIndicator = document.createElement('div');
+        typingIndicator.className = 'mb-4 flex items-center';
+        typingIndicator.id = 'typing-indicator';
+        typingIndicator.innerHTML = `
+          <div class="flex items-center space-x-1 bg-white p-2 rounded-lg shadow-sm">
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0s"></div>
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+            <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+          </div>
+        `;
+        chatMessages.appendChild(typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        // Generate response after a short delay
+        setTimeout(() => {
+          // Remove typing indicator
+          const indicator = document.getElementById('typing-indicator');
+          if (indicator) indicator.remove();
+          
+          // Get and send bot response
+          const response = getBotResponse(message);
+          addMessage(response, 'bot');
+        }, 800 + Math.random() * 400); // Shorter delay for better UX
+      }
+      
+      function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `mb-4 flex ${sender === 'user' ? 'justify-end' : 'justify-start'}`;
+        
+        messageDiv.innerHTML = `
+          <div class="${sender === 'user' ? 'bg-primary text-white' : 'bg-white'} p-3 rounded-lg shadow-sm max-w-[85%] relative">
+            ${sender === 'bot' ? `
+              <div class="flex items-center mb-1">
+                <span class="font-medium text-sm">Addogo Bot</span>
+                <span class="text-xs text-gray-400 ml-2">BOT</span>
+              </div>
+            ` : ''}
+            <p class="text-sm">${text}</p>
+            <p class="text-xs ${sender === 'user' ? 'text-white/80' : 'text-gray-500'} mt-1 text-right">Just now</p>
+          </div>
+        `;
+        
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+      
+      // Initialize Lucide icons for the chatbot
+      lucide.createIcons();
+    });
   </script>
 </body>
 </html>
